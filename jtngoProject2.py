@@ -18,7 +18,7 @@ __url__ = "http://magicseaweed.com/api/66c79af0fe4e3fb73b3915ea2ef63999/forecast
 ##logging
 logging.basicConfig(
     level=logging.INFO,
-    filename=os.path.join( 'jtngoProject2.log'),
+    filename=os.path.join('jtngoProject2.log'),
     filemode='a',
     format='%(asctime)s - %(lineno)d - %(message)s')
 
@@ -81,7 +81,6 @@ class communityInfo(Sensor):
                 #myList.append(record['main'].get('timestamp'))
             #print(myList)
             #print()
-
         pass
 
     @staticmethod
@@ -94,7 +93,7 @@ class communityInfo(Sensor):
             d = {'k': ts0,
                  'date': ts0.strftime('%Y-%m-%d %I:%M:%S %p'),
                  'caption': 'Mission Beach Surf Report',
-                 'summary': 'For Grossmont College, the warmest temperature of **{} F** is forecast for {}'.format(
+                 'summary': 'the warmest temperature of **{} F** is forecast for {}'.format(
                      m['main']['temp_max'], tsx.strftime("%A %I:%M:%S %p"))
                  }
             return [d]
